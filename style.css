@@ -1,0 +1,111 @@
+:root{
+    font-size: calc( 0.5em + 1vw);
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: rgb(75, 55, 154);
+}
+
+.info{
+    margin: 8% 10% 8% 10%;
+    background-color: white;
+}
+
+.portada{
+    background-image: url("imagenes/header-bg.jpg");
+    background-position: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 75vh;
+    flex-direction: column;
+    position: relative;
+}
+
+.portada h4{
+    margin: 0;
+    font-weight: 400;
+}
+
+.portada h1{
+    font-weight: 100;
+    margin: 0;
+    font-size: 6em;
+}
+
+.portada img{
+    padding: 1%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.reasons, .reasons2,span, .form{
+    margin-left: 2%;
+    height: 75vh;
+}
+
+.reasons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reasons img{
+    height: 60%;
+    width: 55%;
+    padding: 2%;
+    margin-right: 2%; 
+}
+
+.content{
+    font-size: 0.75em;
+    font-weight: 100;
+}
+
+.titulos{
+    font-size: 1.5em;
+    text-align: left;
+    font-weight: 100;
+}
+
+.galeria{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+}
+
+.cuadro{
+    padding: 3%;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #222222;
+    padding: 10% 0 10% 0;
+    color: white;
+}
+
+footer ul{
+    list-style: none;
+    display: inline-flex;
+    justify-content: space-around;;
+}
+
+.menu{
+    width: 40%;
+}
+
+.redes{
+    width: 20%;
+}
+.cuadro img{
+    height: 100%;
+    width: 100%;
+}
