@@ -23,9 +23,11 @@ body{
     height: 75vh;
     flex-direction: column;
     position: relative;
+    background-repeat: cover;
 }
 
 .portada h4{
+    z-index: 1;
     margin: 0;
     font-weight: 400;
 }
@@ -33,7 +35,8 @@ body{
 .portada h1{
     font-weight: 100;
     margin: 0;
-    font-size: 6em;
+    font-size: 5em;
+    z-index: 1;
 }
 
 .portada img{
@@ -41,6 +44,22 @@ body{
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.portada button{
+    z-index: 1;
+}
+
+.portada::before , .form::before{
+    content: "";
+    position: absolute;
+    background-color: blueviolet;
+    z-index: 0;
+    top:0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0.9;
 }
 
 .reasons, .reasons2 , span, .form{
@@ -114,6 +133,91 @@ body{
     padding: 3%;
 }
 
+
+.form{
+    position: relative;
+    background: url("imagenes/s2.jpg") no-repeat center center/cover;
+    justify-content: center;
+    align-items:center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; 
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-weight: 100;
+}
+
+.form p{
+    margin: 0;
+    z-index: 1;
+}
+
+form{
+    margin: 5% 2% 0 2%;
+    display: grid;
+    height: 55%;
+    z-index: 1;
+    grid-template-areas: "name email"
+                        "message message"
+                        "boton boton";
+    width: 70%;
+}
+
+#name{
+    height: 50%;
+    margin-top: 0;
+    grid-area: name;
+}
+
+#email{
+    height: 50%;
+    grid-area: email;
+    margin-top: 0;
+}
+
+#message{
+    grid-area: message;
+    height: 90%;
+    margin-top: 0; 
+}
+
+#boton{
+    grid-area: boton;
+    width: 50%;
+}
+
+#name, #boton, #email, #message{
+    margin: 1em;
+    background-color: transparent;
+    border: solid blueviolet 1px;
+    color: white;
+    font-size: 0.5em;
+    padding-left: 3%;
+}
+
+::-webkit-input-placeholder{
+    color: whitesmoke;
+}
+
+.parrafo{
+    font-weight: 200;
+    width: 45%;
+    font-size: 1em; 
+    text-align: center;
+    height: 10%;
+}
+
+span{
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;    
+    flex-direction: column;
+}
+
+
 footer{
     display: flex;
     justify-content: center;
@@ -140,4 +244,61 @@ footer ul{
 .cuadro img{
     height: 100%;
     width: 100%;
+}
+
+.end{
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    border-radius: 1em;
+    font-size: 1em;
+    height: 2em;
+    width: 9em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.start{
+    border: 1px solid blueviolet;
+    background-color: blueviolet;
+    color: white;
+    border-radius: 1em;
+    text-align: center;
+    font-size: 0.8em;
+    height: 2em;
+    width: 9em;
+    font-family: 'Poppins', sans-serif;
+}
+
+@media only screen and (max-width: 768px) {
+    .galeria{
+        grid-template-columns: 100%;
+    }
+
+    form{
+        grid-template-areas: "name"
+                            "email"
+                            "message"
+                            "boton";
+        
+    }
+    .reasons2 .reasons-content{
+        margin:2%;
+        width: 75%;
+        display: inline;
+        right: 10%;
+    }
+
+    .reasons{
+        flex-direction: column;
+    }
+
+    .reasons img{
+        height: 45%;
+        width: 75%;
+        padding: 0;
+    }
+    #num1{
+        width: 75%;
+        margin-bottom: 2%;
+    }
 }
